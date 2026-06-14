@@ -17,6 +17,11 @@
                         {{ request()->routeIs('dashboard') ? 'bg-sky-100 text-sky-700' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100' }}">
                         Dashboard
                     </a>
+                    <a href="{{ route('todos.index') }}"
+                        class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200
+                        {{ request()->routeIs('todos.*') ? 'bg-sky-100 text-sky-700' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100' }}">
+                        To-Do
+                    </a>
                     <a href="{{ route('profile.show') }}"
                         class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200
                         {{ request()->routeIs('profile.show') ? 'bg-sky-100 text-sky-700' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100' }}">
@@ -79,6 +84,11 @@
                 class="block px-3 py-2 text-sm font-medium rounded-lg transition-all
                 {{ request()->routeIs('dashboard') ? 'bg-sky-100 text-sky-700' : 'text-gray-600 hover:bg-gray-100' }}">
                 Dashboard
+            </a>
+            <a href="{{ route('todos.index') }}"
+                class="block px-3 py-2 text-sm font-medium rounded-lg transition-all
+                {{ request()->routeIs('todos.*') ? 'bg-sky-100 text-sky-700' : 'text-gray-600 hover:bg-gray-100' }}">
+                To-Do
             </a>
             <a href="{{ route('profile.show') }}"
                 class="block px-3 py-2 text-sm font-medium rounded-lg transition-all
